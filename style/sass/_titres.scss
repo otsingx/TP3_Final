@@ -1,0 +1,16 @@
+@use './variables' as *;
+
+.section-titres {
+  &__title {
+    color: $couleur-fonce;          
+  }
+
+  &__accent {
+    color: $couleur-secondaire;     
+  }
+
+  &__text {                          
+    color: $couleur-fonce;
+    line-height: 1.6;        
+  }
+}

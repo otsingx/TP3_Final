@@ -1,0 +1,8 @@
+{
+  "liveServer.settings.port": 5502,
+
+  "editor.formatOnSave": true,
+  "prettier.printWidth": 140,
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
+}

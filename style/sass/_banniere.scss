@@ -1,0 +1,17 @@
+
+@use './variables' as *;
+
+
+@keyframes backInUp-clean {
+  0% { opacity:0; transform:translate3d(0,80px,0) }
+  50% { opacity:1; transform:translate3d(0,0,0) }
+}
+
+
+.banniere__accroche--primaire {
+  color: $couleur-primaire;
+}
+
+.banniere__accroche--backInUp {
+  animation: backInUp-clean 6s ease-out 3 both;
+}

@@ -1,0 +1,55 @@
+@use './variables' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #f9f9f9; 
+  border: none;
+ 
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: background-color $transition-standard, color $transition-standard, transform $transition-standard;
+
+  &:focus-visible {
+    outline: 3px solid mix($couleur-secondaire, white, 80%);
+    outline-offset: 2px;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.btn--primaire {
+  background-color: $couleur-primaire;
+  color: #fff;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primaire-hover;
+  }
+}
+
+.btn--secondaire {
+  background-color: $couleur-secondaire;
+  color: $couleur-clair;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $secondaire-hover;
+  }
+}
+
+.btn--submit {
+  background-color: $couleur-primaire;
+  color: #fff;
+  margin: 1rem 0 3rem;
+
+  &:hover {
+    background-color: $couleur-secondaire;
+  }
+}

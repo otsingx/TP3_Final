@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+.carte {
+  &__overlay {
+    background-color: #fff; 
+    color: $couleur-fonce;
+    border: 2px solid $couleur-secondaire;
+    backface-visibility: hidden;
+  }
+ 
+  &__overlay-text {
+    color: $couleur-secondaire; 
+  }
+  &__img {
+    backface-visibility: hidden;
+  }
+}
