@@ -8,12 +8,21 @@
     transform: translate3d(0, 0, 0);
   }
 }
+.banniere__title {
+  color: #1f2937;
+}
+.banniere__accent {
+  color: #163f82;
+}
+.banniere__texte {
+  color: #1f2937;
+  line-height: 1.6;
+}
 .banniere__accroche--primaire {
   color: #f97316;
 }
-
 .banniere__accroche--backInUp {
-  animation: backInUp-clean 6s ease-out 3 both;
+  animation: backInUp-clean 6s ease-out 0s 3 both;
 }
 
 .btn {
@@ -83,4 +92,19 @@
 .section-titres__text {
   color: #1f2937;
   line-height: 1.6;
+}
+
+.temoignages__title, .temoignages__nom, .temoignages__citation {
+  color: #1f2937;
+}
+.temoignages__soustitre {
+  color: rgb(75.8, 83.8, 95);
+}
+.temoignages__carte {
+  background-color: #f9f9f9;
+  border: 2px solid #163f82;
+}
+.temoignages__avatar {
+  border-radius: 9999px;
+  object-fit: cover;
 }
