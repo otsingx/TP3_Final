@@ -1,0 +1,46 @@
+@use './variables' as *;
+
+.catalogue {
+  &__carte {
+    background: #fff;
+    border: 2px solid $couleur-secondaire;
+
+    box-shadow: 0 10px 20px 0 rgba($couleur-fonce, .18);
+    
+  }
+   &__prix,
+  &__titre {
+    color: $couleur-fonce;
+  }
+  &__description {
+    color: mix($couleur-fonce, #fff, 75%);
+  }
+ 
+  &__heures {
+    color: $couleur-primaire;
+  }
+
+  &__stock-valeur,
+  &__unite {
+    color: mix($couleur-erreur, #fff, 85%);
+  }
+
+  &__stock--dispo {
+    .catalogue__stock-valeur,
+    .catalogue__unite {
+      color: $couleur-accent;
+    }
+  }
+  &__stock--faible {
+    .catalogue__stock-valeur,
+    .catalogue__unite {
+      color: $couleur-primaire;
+    }
+  }
+  &__stock--rupture {
+    .catalogue__stock-valeur,
+    .catalogue__unite {
+      color: $couleur-erreur;
+    }
+  }
+}
