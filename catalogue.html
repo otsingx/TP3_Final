@@ -28,8 +28,7 @@
             for="nav-burger"
             class="md:hidden text-[#f97316] text-5xl p-2 cursor-pointer"
             aria-label="Ouvrir le menu"
-            aria-controls="site-nav"
-            aria-expanded="false">
+            aria-controls="site-nav">
             <i class="bx bx-menu"></i>
           </label>
           <input id="nav-burger" type="checkbox" class="peer hidden" />
@@ -73,7 +72,7 @@
                 alt="Kit de levage automobile, chandelles, cale de roue, cric hydraulique"
                 class="catalogue__img h-full w-full" />
             </figure>
-            <div class="p-4 space-y-3 flex flex-col grow">
+            <div class="p-4 flex flex-col grow gap-3">
               <h4 class="catalogue__titre font-bold text-xl">Kit de levage automobile</h4>
               <ul class="catalogue__specs list-disc pl-5 text-sm leading-6">
                 <li>cric hydraulique <strong>2,5&nbsp;t</strong></li>
@@ -86,7 +85,12 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, kit de levage automobile">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -95,9 +99,9 @@
                   Louer 24&nbsp;h
                 </button>
               </div>
-              <p class="catalogue__stock catalogue__stock--dispo text-sm">
+              <p class="catalogue__stock catalogue__stock--faible text-sm">
                 <span class="sr-only">Stock&nbsp;:</span>
-                <data value="5" class="catalogue__stock-valeur font-bold">5</data>
+                <data value="2" class="catalogue__stock-valeur font-bold">2</data>
                 <span class="catalogue__unite font-bold">en stock</span>
               </p>
             </div>
@@ -122,7 +126,12 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, crics à double verrou">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -133,7 +142,7 @@
               </div>
               <p class="catalogue__stock catalogue__stock--dispo text-sm">
                 <span class="sr-only">Stock&nbsp;:</span>
-                <data value="5" class="catalogue__stock-valeur font-bold">5</data>
+                <data value="3" class="catalogue__stock-valeur font-bold">3</data>
                 <span class="catalogue__unite font-bold">en stock</span>
               </p>
             </div>
@@ -158,7 +167,12 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, cales de roue en caoutchouc">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -177,7 +191,7 @@
           <!--cric-hydralique-->
           <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
             <figure class="relative aspect-[3/4]">
-              <img src="img/levage/cric-hydralique.jpg" alt="Cric hydraulique 2,5 tonnes" class="catalogue__img h-full w-full" />
+              <img src="img/levage/cric-hydraulique.jpg" alt="Cric hydraulique 2,5 tonnes" class="catalogue__img h-full w-full" />
             </figure>
             <div class="p-4 flex flex-col gap-3 grow">
               <h4 class="catalogue__titre font-bold text-xl">Cric roulant hydraulique, Big Red</h4>
@@ -191,7 +205,12 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, cric roulant hydraulique">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -200,16 +219,16 @@
                   Louer 24&nbsp;h
                 </button>
               </div>
-              <p class="catalogue__stock catalogue__stock--dispo text-sm">
-                <span class="sr-only">Stock&nbsp;:</span>
-                <data value="5" class="catalogue__stock-valeur font-bold">5</data>
-                <span class="catalogue__unite font-bold">en stock</span>
+              <p class="catalogue__stock catalogue__stock--rupture text-sm">
+                <span class="sr-only">Stock&nbsp;: </span>
+                <data value="0" class="catalogue__stock-valeur font-bold">0</data>
+                <span class="catalogue__unite font-bold">rupture de stock</span>
               </p>
             </div>
           </article>
 
           <!--  ENTRETIEN-->
-          <h3 id="entretien" class="col-span-12 text-xl font-semibold mt-4 scroll-mt-24">Outils d'entretien du véhicule</h3>
+          <h3 id="entretien" class="col-span-12 text-xl font-semibold mt-4 scroll-mt-24">Outils d'entretien automobile</h3>
 
           <!--polisseuse-->
           <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
@@ -223,7 +242,7 @@
               <h4 class="catalogue__titre font-bold text-xl">Polisseuse Simons</h4>
               <ul class="catalogue__specs list-disc pl-5 text-sm leading-6">
                 <li>vitesse max <strong>3 500 tr/min</strong></li>
-                <li>variateur <strong>600 et 3200 tr/min</strong></li>
+                <li>variateur <strong>600 à 3200 tr/min</strong></li>
                 <li>adaptée aux amateurs et professionnels</li>
               </ul>
               <div class="flex gap-2 mt-auto">
@@ -232,7 +251,12 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, polisseuse Simons">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -269,7 +293,12 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, coupe-filtre à huile">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -278,9 +307,9 @@
                   Louer 24&nbsp;h
                 </button>
               </div>
-              <p class="catalogue__stock catalogue__stock--dispo text-sm">
+              <p class="catalogue__stock catalogue__stock--faible text-sm">
                 <span class="sr-only">Stock&nbsp;:</span>
-                <data value="5" class="catalogue__stock-valeur font-bold">5</data>
+                <data value="2" class="catalogue__stock-valeur font-bold">2</data>
                 <span class="catalogue__unite font-bold">en stock</span>
               </p>
             </div>
@@ -297,7 +326,7 @@
             <div class="p-4 flex flex-col gap-3 grow">
               <h4 class="catalogue__titre font-bold text-xl">Clé à filtre à huile universelle</h4>
               <ul class="catalogue__specs list-disc pl-5 text-sm leading-6">
-                <li>gamme de coupe&nbsp;: <strong>2,56&nbsp;po à 5,00&nbsp;po</strong></li>
+                <li>plage de diamètre&nbsp;: <strong>2,56&nbsp;po à 5,00&nbsp;po</strong></li>
               </ul>
               <div class="flex gap-2 mt-auto">
                 <span class="catalogue__prix text-2xl font-semibold">
@@ -305,7 +334,12 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, clé à filtre à huile universelle">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -322,12 +356,12 @@
             </div>
           </article>
 
-          <!--DIAGNOSTIC coffret de clés-->
-          <h3 id="diagnostic-motor" class="col-span-12 text-xl font-semibold mt-4 scroll-mt-24">Outils de diagnostic</h3>
+          <!--DIAGNOSTIC-MOTEUR coffret de clés-->
+          <h3 id="diagnostic-motor" class="col-span-12 text-xl font-semibold mt-4 scroll-mt-24">Outils de diagnostic moteur</h3>
           <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
             <figure class="relative aspect-[3/4]">
               <img
-                src="img/diagnostic/cle.jpg"
+                src="img/diagnostic-moteur/cle.jpg"
                 alt="Coffret de clés à douilles avec cliquet et rallonges"
                 class="catalogue__img h-full w-full" />
             </figure>
@@ -343,7 +377,12 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, coffret de clés à douilles">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -354,7 +393,7 @@
               </div>
               <p class="catalogue__stock catalogue__stock--dispo text-sm">
                 <span class="sr-only">Stock&nbsp;:</span>
-                <data value="5" class="catalogue__stock-valeur font-bold">5</data>
+                <data value="4" class="catalogue__stock-valeur font-bold">4</data>
                 <span class="catalogue__unite font-bold">en stock</span>
               </p>
             </div>
@@ -363,15 +402,15 @@
           <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
             <figure class="relative aspect-[3/4]">
               <img
-                src="img/diagnostic/fume.jpg"
+                src="img/diagnostic-moteur/fume.jpg"
                 alt="Machine à fumée pour diagnostic EVAP avec pinces 12 V et accessoires"
                 class="catalogue__img h-full w-full" />
             </figure>
             <div class="p-4 flex flex-col gap-3 grow">
-              <h4 class="catalogue__titre font-bold text-xl">Détecteur de fuite automobile pour machine à fumée(EVAP)</h4>
+              <h4 class="catalogue__titre font-bold text-xl">Détecteur de fuites (machine à fumée EVAP)</h4>
               <ul class="catalogue__specs list-disc pl-5 text-sm leading-6">
-                <li>Alimentation <strong>12 V</strong> avec pinces batterie</li>
-                <li>Accessoires inclus : entonnoir, tuyau et flacon d'huile minérale</li>
+                <li>alimentation <strong>12 V</strong> avec pinces batterie</li>
+                <li>accessoires inclus : entonnoir, tuyau et flacon d'huile minérale</li>
               </ul>
               <div class="flex gap-2 mt-auto">
                 <span class="catalogue__prix text-2xl font-semibold">
@@ -379,7 +418,52 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, détecteur de fuites">
+                  Vérifier la dispo
+                </a>
+                <button
+                  class="btn btn--primaire w-32 text-center text-xs py-1.5"
+                  disabled
+                  aria-disabled="true"
+                  title="Fonction bientôt disponible">
+                  Louer 24&nbsp;h
+                </button>
+              </div>
+              <p class="catalogue__stock catalogue__stock--dispo text-sm">
+                <span class="sr-only">Stock&nbsp;:</span>
+                <data value="3" class="catalogue__stock-valeur font-bold">3</data>
+                <span class="catalogue__unite font-bold">en stock</span>
+              </p>
+            </div>
+          </article>
+          <!--manometre-->
+          <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
+            <figure class="relative aspect-[3/4]">
+              <img
+                src="img/diagnostic-moteur/manometre.jpg"
+                alt="Manomètre de diagnostic automobile pour tester la pression"
+                class="catalogue__img h-full w-full" />
+            </figure>
+            <div class="p-4 flex flex-col gap-3 grow">
+              <h4 class="catalogue__titre font-bold text-xl">Manomètre de diagnostic</h4>
+              <ul class="catalogue__specs list-disc pl-5 text-sm leading-6">
+                <li>mesure la compression moteur</li>
+              </ul>
+              <div class="flex gap-2 mt-auto">
+                <span class="catalogue__prix text-2xl font-semibold">
+                  <data value="15">15&nbsp;$</data>
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, manometre de diagnostic">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -395,18 +479,24 @@
               </p>
             </div>
           </article>
-          <!--manometre-->
+          <!-- DIAGNOSTIC ÉLECTRIQUE et ÉLECTRONIQUE multimetre-->
+          <h3 id="diagnostic-electronique" class="col-span-12 text-xl font-semibold mt-4 scroll-mt-24">
+            Outils de diagnostic électrique et électronique
+          </h3>
+
           <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
             <figure class="relative aspect-[3/4]">
               <img
-                src="img/diagnostic/manometre.jpg"
-                alt="Manomètre de diagnostic automobile pour tester la pression"
+                src="img/diagnostic-electronique/multimetre.jpg"
+                alt="Multimètre numérique pour diagnostic électrique automobile"
                 class="catalogue__img h-full w-full" />
             </figure>
             <div class="p-4 flex flex-col gap-3 grow">
-              <h4 class="catalogue__titre font-bold text-xl">Manomètre de diagnostic</h4>
+              <h4 class="catalogue__titre font-bold text-xl">KAIWEETS Multimètre numérique TRMS 6000</h4>
               <ul class="catalogue__specs list-disc pl-5 text-sm leading-6">
-                <li>Mesure la compression moteur</li>
+                <li>mesure jusqu'à <strong>600&nbsp;V AC/DC</strong> et <strong>10&nbsp;A DC</strong></li>
+                <li>contrôle de la <strong>batterie</strong>, de l'<strong>alternateur</strong> et du circuit électrique</li>
+                <li>fonctions pratiques&nbsp;: <strong>résistance</strong>, <strong>continuité</strong> et <strong>diode</strong></li>
               </ul>
               <div class="flex gap-2 mt-auto">
                 <span class="catalogue__prix text-2xl font-semibold">
@@ -414,7 +504,12 @@
                 </span>
               </div>
               <div class="flex gap-2">
-                <a href="reservation.html" class="btn btn--secondaire w-32 text-center text-xs py-1.5"> Vérifier la dispo </a>
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, multimetre numérique">
+                  Vérifier la dispo
+                </a>
                 <button
                   class="btn btn--primaire w-32 text-center text-xs py-1.5"
                   disabled
@@ -425,7 +520,90 @@
               </div>
               <p class="catalogue__stock catalogue__stock--dispo text-sm">
                 <span class="sr-only">Stock&nbsp;:</span>
-                <data value="5" class="catalogue__stock-valeur font-bold">5</data>
+                <data value="4" class="catalogue__stock-valeur font-bold">4</data>
+                <span class="catalogue__unite font-bold">en stock</span>
+              </p>
+            </div>
+          </article>
+
+          <!--obdLink-->
+          <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
+            <figure class="relative aspect-[3/4]">
+              <img
+                src="img/diagnostic-electronique/obd.jpg"
+                alt="OBDLink MX Bluetooth pour diagnostic OBD2 automobile"
+                class="catalogue__img h-full w-full" />
+            </figure>
+            <div class="p-4 flex flex-col gap-3 grow">
+              <h4 class="catalogue__titre font-bold text-xl">OBDLink MX Bluetooth</h4>
+              <ul class="catalogue__specs list-disc pl-5 text-sm leading-6">
+                <li>connexion <strong>Bluetooth</strong> rapide pour applications iOS et Android</li>
+                <li>lire et effacer les <strong>codes défaut</strong> des calculateurs <strong>(ECU)</strong></li>
+              </ul>
+              <div class="flex gap-2 mt-auto">
+                <span class="catalogue__prix text-2xl font-semibold">
+                  <data value="15">15&nbsp;$</data>
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, OBDLink MX Bluetooth">
+                  Vérifier la dispo
+                </a>
+                <button
+                  class="btn btn--primaire w-32 text-center text-xs py-1.5"
+                  disabled
+                  aria-disabled="true"
+                  title="Fonction bientôt disponible">
+                  Louer 24&nbsp;h
+                </button>
+              </div>
+              <p class="catalogue__stock catalogue__stock--faible text-sm">
+                <span class="sr-only">Stock&nbsp;:</span>
+                <data value="2" class="catalogue__stock-valeur font-bold">2</data>
+                <span class="catalogue__unite font-bold">en stock</span>
+              </p>
+            </div>
+          </article>
+          <!--testeur circuit-->
+          <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
+            <figure class="relative aspect-[3/4]">
+              <img
+                src="img/diagnostic-electronique/testeur-circuit.jpg"
+                alt="Testeur de circuit électrique 6-24 V avec pince crocodile"
+                class="catalogue__img h-full w-full" />
+            </figure>
+            <div class="p-4 flex flex-col gap-3 grow">
+              <h4 class="catalogue__titre font-bold text-xl">Testeur de circuit 6-24&nbsp;V</h4>
+              <ul class="catalogue__specs list-disc pl-5 text-sm leading-6">
+                <li>indique rapidement la <strong>présence de tension</strong> dans le circuit</li>
+                <li>pointe de test avec <strong>pince crocodile</strong> pour la masse</li>
+              </ul>
+              <div class="flex gap-2 mt-auto">
+                <span class="catalogue__prix text-2xl font-semibold">
+                  <data value="15">15&nbsp;$</data>
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a
+                  href="reservation.html"
+                  class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+                  aria-label="Vérifier la disponibilité, testeur de circuit">
+                  Vérifier la dispo
+                </a>
+                <button
+                  class="btn btn--primaire w-32 text-center text-xs py-1.5"
+                  disabled
+                  aria-disabled="true"
+                  title="Fonction bientôt disponible">
+                  Louer 24&nbsp;h
+                </button>
+              </div>
+              <p class="catalogue__stock catalogue__stock--dispo text-sm">
+                <span class="sr-only">Stock&nbsp;:</span>
+                <data value="7" class="catalogue__stock-valeur font-bold">7</data>
                 <span class="catalogue__unite font-bold">en stock</span>
               </p>
             </div>

@@ -76,7 +76,7 @@
   border: 2px solid #163f82;
   backface-visibility: hidden;
 }
-.carte__overlay-text {
+.carte__overlay-texte {
   color: #163f82;
 }
 .carte__img {
@@ -114,7 +114,7 @@
   border: 2px solid #163f82;
   box-shadow: 0 10px 20px 0 rgba(31, 41, 55, 0.18);
 }
-.catalogue__prix, .catalogue__titre {
+.catalogue__titre, .catalogue__prix {
   color: #1f2937;
 }
 .catalogue__description {

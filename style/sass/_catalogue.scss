@@ -4,18 +4,17 @@
   &__carte {
     background: #fff;
     border: 2px solid $couleur-secondaire;
-
-    box-shadow: 0 10px 20px 0 rgba($couleur-fonce, .18);
-    
+    box-shadow: 0 10px 20px 0 rgba($couleur-fonce, 0.18);
   }
-   &__prix,
-  &__titre {
+
+  &__titre,
+  &__prix {
     color: $couleur-fonce;
   }
   &__description {
     color: mix($couleur-fonce, #fff, 75%);
   }
- 
+
   &__heures {
     color: $couleur-primaire;
   }
@@ -44,3 +43,4 @@
     }
   }
 }
+

@@ -28,8 +28,7 @@
             for="nav-burger"
             class="md:hidden text-[#f97316] text-5xl p-2 cursor-pointer"
             aria-label="Ouvrir le menu"
-            aria-controls="site-nav"
-            aria-expanded="false">
+            aria-controls="site-nav">
             <i class="bx bx-menu"></i>
           </label>
           <input id="nav-burger" type="checkbox" class="peer hidden" />
@@ -62,8 +61,7 @@
 
     <main class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-10 space-y-20 sm:space-y-24 lg:space-y-32 xl:space-y-40">
       <section id="banniere-accueil" class="banniere grid grid-cols-12 items-center gap-8 md:gap-10">
-        <div
-          class="col-span-12 md:col-span-7 relative overflow-hidden h-64 sm:h-80 md:h-[28rem] lg:h-[32rem] order-1 md:order-2">
+        <div class="col-span-12 md:col-span-7 relative overflow-hidden h-64 sm:h-80 md:h-[28rem] lg:h-[32rem] order-1 md:order-2">
           <img
             src="img/banniere.jpg"
             alt="Capot de voiture ouvert, outils devant la voiture"
@@ -91,30 +89,37 @@
         </div>
       </section>
 
-      <!-----CARTES ---->
+      <!--CARTES-->
 
       <section id="cartes" class="grid grid-cols-12 gap-4 lg:grid-cols-10">
         <article class="col-span-6 sm:col-span-4 md:col-span-4 lg:col-span-2 lg:translate-y-32 space-y-4 sm:space-y-5 lg:space-y-6">
+          <h3 class="sr-only">Ressources en ligne</h3>
           <div class="carte group/carte [perspective:1000px]">
             <div
               class="relative aspect-[3/4] transition-transform duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)] [transform:rotateY(0deg)] group-hover/carte:[transform:rotateY(180deg)]">
               <div class="carte__overlay absolute inset-0 grid place-items-center text-center px-4">
                 <p class="carte__overlay-text font-bold">Ressources en ligne</p>
               </div>
-
               <img
                 src="img/youtube.jpg"
-                alt="Sujet 1"
+                alt=""
                 class="carte__img absolute inset-0 h-full w-full object-cover [transform:rotateY(180deg)]" />
             </div>
           </div>
           <div class="mt-2 flex gap-2 justify-center">
-             <a href="" target="_blank" class="btn btn--secondaire w-32 text-center text-xs py-1.5">Vidéo</a>
-            <a href="#maintenance-1" class="btn btn--primaire w-32 text-center text-xs py-1.5">Voir plus</a>
+            <a
+              href=""
+              target="_blank"
+              class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+              aria-label="Ouvrir la vidéo YouTube (ouvre dans un nouvel onglet)">
+              Vidéo</a
+            >
+             <a href="#maintenance-1" class="btn btn--primaire w-32 text-center text-xs py-1.5">Voir plus</a>
           </div>
         </article>
-        <!-----carte 2 ---->
+        <!--carte-2-->
         <article class="col-span-6 sm:col-span-4 md:col-span-4 lg:col-span-2 lg:translate-y-16 space-y-4 sm:space-y-5 lg:space-y-6">
+          <h3 class="sr-only">Kit de levage automobile</h3>
           <div class="carte group/carte [perspective:1000px]">
             <div
               class="relative aspect-[3/4] transition-transform duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)] [transform:rotateY(0deg)] group-hover/carte:[transform:rotateY(180deg)]">
@@ -124,17 +129,24 @@
 
               <img
                 src="img/levage/levage.jpg"
-                alt="Sujet 1"
+                alt=""
                 class="carte__img absolute inset-0 h-full w-full object-cover [transform:rotateY(180deg)]" />
             </div>
           </div>
           <div class="mt-2 flex gap-2 justify-center">
-              <a href="" target="_blank" class="btn btn--secondaire w-32 text-center text-xs py-1.5">Vidéo</a>
+            <a
+              href=""
+              target="_blank"
+              class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+              aria-label="Ouvrir la vidéo YouTube (ouvre dans un nouvel onglet)"
+              >Vidéo</a
+            >
             <a href="catalogue.html#levage-kit" class="btn btn--primaire w-32 text-center text-xs py-1.5">Voir plus</a>
           </div>
         </article>
-        <!-----carte 3 ---->
+        <!--carte-3-->
         <article class="col-span-6 sm:col-span-4 md:col-span-4 lg:col-span-2 lg:translate-y-4 space-y-4 sm:space-y-5 lg:space-y-6">
+          <h3 class="sr-only">Outils d'entretien automobile</h3>
           <div class="carte group/carte [perspective:1000px]">
             <div
               class="relative aspect-[3/4] transition-transform duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)] [transform:rotateY(0deg)] group-hover/carte:[transform:rotateY(180deg)]">
@@ -144,17 +156,24 @@
 
               <img
                 src="img/entretien.jpg"
-                alt="Sujet 1"
+                alt=""
                 class="carte__img absolute inset-0 h-full w-full object-cover [transform:rotateY(180deg)]" />
             </div>
           </div>
           <div class="mt-2 flex gap-2 justify-center">
-             <a href="" target="_blank" class="btn btn--secondaire w-32 text-center text-xs py-1.5">Vidéo</a>
+            <a
+              href=""
+              target="_blank"
+              class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+              aria-label="Ouvrir la vidéo YouTube (ouvre dans un nouvel onglet)"
+              >Vidéo</a
+            >
             <a href="catalogue.html#entretien" class="btn btn--primaire w-32 text-center text-xs py-1.5">Voir plus</a>
           </div>
         </article>
-        <!-----carte 4 ---->
+        <!--carte 4-->
         <article class="col-span-6 sm:col-span-4 md:col-span-4 lg:col-span-2 lg:translate-y-16 space-y-4 sm:space-y-5 lg:space-y-6">
+          <h3 class="sr-only">Outils de diagnostic moteur</h3>
           <div class="carte group/carte [perspective:1000px]">
             <div
               class="relative aspect-[3/4] transition-transform duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)] [transform:rotateY(0deg)] group-hover/carte:[transform:rotateY(180deg)]">
@@ -164,135 +183,149 @@
 
               <img
                 src="img/diagnostic.jpg"
-                alt="Sujet 1"
+                alt=""
                 class="carte__img absolute inset-0 h-full w-full object-cover [transform:rotateY(180deg)]" />
             </div>
           </div>
           <div class="mt-2 flex gap-2 justify-center">
-             <a
+            <a
               href="https://www.youtube-nocookie.com/watch?v=VIDEO_ID_1"
               target="_blank"
               class="btn btn--secondaire w-32 text-center text-xs py-1.5"
-              >Vidéo</a>
-            <a href="catalogue.html#diagnostic-motor" class="btn btn--primaire w-32 text-center text-xs py-1.5">Voir plus</a>       
+              aria-label="Ouvrir la vidéo YouTube (ouvre dans un nouvel onglet)"
+              >Vidéo</a
+            >
+            <a href="catalogue.html#diagnostic-moteur" class="btn btn--primaire w-32 text-center text-xs py-1.5">Voir plus</a>
           </div>
         </article>
-        <!-----carte 5 ---->
+
+        <!--carte 5-->
         <article class="col-span-6 sm:col-span-4 md:col-span-4 lg:col-span-2 lg:translate-y-32 space-y-4 sm:space-y-5 lg:space-y-6">
+          <h3 class="sr-only">Outils de diagnostic électrique et électronique</h3>
           <div class="carte group/carte [perspective:1000px]">
             <div
               class="relative aspect-[3/4] transition-transform duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)] [transform:rotateY(0deg)] group-hover/carte:[transform:rotateY(180deg)]">
               <div class="carte__overlay absolute inset-0 grid place-items-center text-center px-4">
-                <p class="carte__overlay-text font-bold">Outils de diagnostic électronique</p>
+                <p class="carte__overlay-texte font-bold">Outils de diagnostic électrique et électronique</p>
               </div>
               <img
                 src="img/electronique.jpg"
-                alt="Sujet 1"
+                alt=""
                 class="carte__img absolute inset-0 h-full w-full object-cover [transform:rotateY(180deg)]" />
             </div>
           </div>
           <div class="mt-2 flex gap-2 justify-center">
-             <a href="" target="_blank" class="btn btn--secondaire w-32 text-center text-xs py-1.5">Vidéo</a>
-            <a href="#maintenance-1" class="btn btn--primaire w-32 text-center text-xs py-1.5">Voir plus</a>
+            <a
+              href=""
+              target="_blank"
+              class="btn btn--secondaire w-32 text-center text-xs py-1.5"
+              aria-label="Ouvrir la vidéo YouTube (ouvre dans un nouvel onglet)"
+              >Vidéo</a
+            >
+            <a href="catalogue.html#diagnostic-electronique" class="btn btn--primaire w-32 text-center text-xs py-1.5">Voir plus</a>
           </div>
         </article>
       </section>
 
-
-   <!---- TÉMOIGNAGES ---->
+      <!-- TÉMOIGNAGES -->
 
       <section id="avis-clients" class="temoignages grid grid-cols-12 gap-4">
-        <!-- Header -->
         <div class="col-span-12 text-center mb-4 sm:mb-6">
           <h3 class="temoignages__title text-2xl sm:text-3xl font-semibold">Témoignages</h3>
           <p class="temoignages__soustitre text-sm sm:text-base">Clients satisfaits</p>
         </div>
 
-        <!----cta----->
+        <!--cta-->
         <aside class="temoignages__cta col-span-12 md:col-span-4 order-3 md:order-2">
           <div class="grid place-items-center md:sticky md:top-1/2 md:-translate-y-1/2">
             <a href="/contact.html" class="btn btn--primaire md:w-auto md:max-w-xs px-3 py-2 text-center mt-4 md:mt-12">Nous contacter</a>
           </div>
         </aside>
-   <div class="col-span-12 md:col-span-8 order-1 md:order-1 grid grid-cols-12 gap-4">
-          <!----temo-carte-1---->
-          <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid gap-3">
-            <div class="grid grid-cols-12 items-center gap-3">
-              <img src="img/client.png" alt="" class="temoignages__avatar col-span-2 w-12 h-12 rounded-full object-cover" />
-              <figcaption class="temoignages__nom col-span-10 font-semibold">James Quill</figcaption>
-            </div>
-            <blockquote class="temoignages__citation">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium eaque qui aliquid? Soluta accusamus praesentium quos
-              tempore adipisci enim accusantium, veritatis officia possimus animi nisi, quis iusto incidunt, aspernatur voluptatem.
-            </blockquote>
-          </figure>
-<!----temo-carte-2---->
-              <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid content-start gap-3">
-            <div class="grid grid-cols-12 items-center gap-3">
-              <img src="img/client.png" alt="" class="temoignages__avatar col-span-2 w-12 h-12 rounded-full object-cover" />
-              <figcaption class="temoignages__nom col-span-10 font-semibold">James Quill</figcaption>
-            </div>
-            <blockquote class="temoignages__citation">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            </blockquote>
-          </figure>
-<!----temo-carte-3---->
-               <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid content-start gap-3">
-            <div class="grid grid-cols-12 items-center gap-3">
-              <img src="img/client.png" alt="" class="temoignages__avatar col-span-2 w-12 h-12 rounded-full object-cover" />
-              <figcaption class="temoignages__nom col-span-10 font-semibold">James Quill</figcaption>
-            </div>
-            <blockquote class="temoignages__citation">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium eaque qui aliquid? Soluta accusamus praesentium quos
-              tempore adipisci enim accusantium, veritatis officia possimus animi nisi, quis iusto incidunt, aspernatur voluptatem.
-            </blockquote>
-          </figure>
-<!----temo-carte-4---->
-              <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid content-start gap-3">
-            <div class="grid grid-cols-12 items-center gap-3">
-              <img src="img/client.png" alt="" class="temoignages__avatar col-span-2 w-12 h-12 rounded-full object-cover" />
-              <figcaption class="temoignages__nom col-span-10 font-semibold">James Quill</figcaption>
-            </div>
-            <blockquote class="temoignages__citation">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium eaque qui aliquid? Soluta accusamus praesentium quos
-              tempore adipisci enim accusantium, veritatis officia possimus animi nisi, quis iusto incidunt, aspernatur voluptatem.
-            </blockquote>
-          </figure>
-<!----temo-carte-5---->
-                <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid content-start gap-3">
-            <div class="grid grid-cols-12 items-center gap-3">
-              <img src="img/client.png" alt="" class="temoignages__avatar col-span-2 w-12 h-12 rounded-full object-cover" />
-              <figcaption class="temoignages__nom col-span-10 font-semibold">James Quill</figcaption>
-            </div>
-            <blockquote class="temoignages__citation">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium eaque qui aliquid? Soluta accusamus praesentium quos
-              tempore adipisci enim accusantium, veritatis officia possimus animi nisi, quis iusto incidunt, aspernatur voluptatem.
-            </blockquote>
-          </figure>
+        <div class="col-span-12 md:col-span-8 order-1 md:order-1 grid grid-cols-12 gap-4">
+          <!--temo-carte-1-->
+          <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid gap-3 grid grid-rows-[auto_1fr]">
+            <figcaption class="flex items-center gap-3">
+              <img src="img/client.png" alt="" class="temoignages__avatar w-12 h-12 rounded-full object-cover flex-shrink-0" />
+              <span class="temoignages__nom font-semibold">James Quill</span>
+            </figcaption>
 
-               <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid content-start gap-3">
-            <div class="grid grid-cols-12 items-center gap-3">
-              <img src="img/client.png" alt="" class="temoignages__avatar col-span-2 w-12 h-12 rounded-full object-cover" />
-              <figcaption class="temoignages__nom col-span-10 font-semibold">James Quill</figcaption>
-            </div>
-            <blockquote class="temoignages__citation">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium eaque qui aliquid? Soluta accusamus praesentium quos
-              tempore adipisci
+            <blockquote class="temoignages__citation m-0">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ut. Magni quas harum vero eveniet voluptatibus consectetur ab
+              similique dignissimos eos architecto. Exercitationem est molestias soluta! Saepe obcaecati quo distinctio.
             </blockquote>
           </figure>
-<!----temo-carte-6---->
-                 <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid content-start gap-3">
-            <div class="grid grid-cols-12 items-center gap-3">
-              <img src="img/client.png" alt="" class="temoignages__avatar col-span-2 w-12 h-12 rounded-full object-cover" />
-              <figcaption class="temoignages__nom col-span-10 font-semibold">James Quill</figcaption>
-            </div>
-            <blockquote class="temoignages__citation">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium eaque qui aliquid? Soluta accusamus praesentium quos
-              tempore adipisci enim accusantium, veritatis officia possimus animi nisi, quis iusto incidunt, aspernatur voluptatem.
+          <!--temo-carte-2-->
+          <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid gap-3 grid grid-rows-[auto_1fr]">
+            <figcaption class="flex items-center gap-3">
+              <img src="img/client.png" alt="" class="temoignages__avatar w-12 h-12 rounded-full object-cover flex-shrink-0" />
+              <span class="temoignages__nom font-semibold">James Quill</span>
+            </figcaption>
+
+            <blockquote class="temoignages__citation m-0">
+              Lorem, ipsum dolor
             </blockquote>
           </figure>
+          <!--temo-carte-3-->
+          <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid gap-3 grid grid-rows-[auto_1fr]">
+            <figcaption class="flex items-center gap-3">
+              <img src="img/client.png" alt="" class="temoignages__avatar w-12 h-12 rounded-full object-cover flex-shrink-0" />
+              <span class="temoignages__nom font-semibold">James Quill</span>
+            </figcaption>
 
+            <blockquote class="temoignages__citation m-0">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ut. Magni quas harum vero eveniet voluptatibus consectetur ab
+              similique dignissimos eos architecto. Exercitationem est molestias soluta! Saepe obcaecati quo distinctio.
+            </blockquote>
+          </figure>
+          <!--temo-carte-4-->
+          <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid gap-3 grid grid-rows-[auto_1fr]">
+            <figcaption class="flex items-center gap-3">
+              <img src="img/client.png" alt="" class="temoignages__avatar w-12 h-12 rounded-full object-cover flex-shrink-0" />
+              <span class="temoignages__nom font-semibold">James Quill</span>
+            </figcaption>
 
+            <blockquote class="temoignages__citation m-0">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ut. Magni quas harum vero eveniet voluptatibus consectetur ab
+              similique dignissimos eos architecto. Exercitationem est molestias soluta! Saepe obcaecati quo distinctio.
+            </blockquote>
+          </figure>
+          <!--temo-carte-5-->
+          <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid gap-3 grid grid-rows-[auto_1fr]">
+            <figcaption class="flex items-center gap-3">
+              <img src="img/client.png" alt="" class="temoignages__avatar w-12 h-12 rounded-full object-cover flex-shrink-0" />
+              <span class="temoignages__nom font-semibold">James Quill</span>
+            </figcaption>
+
+            <blockquote class="temoignages__citation m-0">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ut. Magni quas harum vero eveniet voluptatibus consectetur ab
+              similique dignissimos eos architecto. Exercitationem est molestias soluta! Saepe obcaecati quo distinctio.
+            </blockquote>
+          </figure>
+          <!--temo-carte-6-->
+          <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid gap-3 grid grid-rows-[auto_1fr]">
+            <figcaption class="flex items-center gap-3">
+              <img src="img/client.png" alt="" class="temoignages__avatar w-12 h-12 rounded-full object-cover flex-shrink-0" />
+              <span class="temoignages__nom font-semibold">James Quill</span>
+            </figcaption>
+
+            <blockquote class="temoignages__citation m-0">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ut. Magni quas harum vero eveniet voluptatibus
+            </blockquote>
+          </figure>
+          <!--temo-carte-7-->
+          <figure class="temoignages__carte col-span-12 md:col-span-6 p-4 grid gap-3 grid grid-rows-[auto_1fr]">
+            <figcaption class="flex items-center gap-3">
+              <img src="img/client.png" alt="" class="temoignages__avatar w-12 h-12 rounded-full object-cover flex-shrink-0" />
+              <span class="temoignages__nom font-semibold">James Quill</span>
+            </figcaption>
+
+            <blockquote class="temoignages__citation m-0">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ut. Magni quas harum vero eveniet voluptatibus consectetur ab
+              similique dignissimos eos architecto. Exercitationem est molestias soluta! Saepe obcaecati quo distinctio.
+            </blockquote>
+          </figure>
+        </div>
+      </section>
     </main>
 
     <footer>
