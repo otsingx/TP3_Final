@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="validation.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="stylesheet" href="/style/css/style.css" />
@@ -62,9 +63,11 @@
     <main class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-10 space-y-20 sm:space-y-24 lg:space-y-32 xl:space-y-40">
       <section id="outils" aria-labelledby="outils-titre" class="catalogue">
         <div class="grid grid-cols-12 gap-4 sm:gap-6 lg:gap-10">
-          <h2 id="outils-titre" class="col-span-12 text-2xl font-bold">Outils à louer</h2>
+          <h2 id="outils-titre" class="col-span-12 text-3xl sm:text-4xl lg:text-5xl font-bold">Outils à louer</h2>
           <!--LEVAGE  kit  -->
-          <h3 id="levage-kit" class="col-span-12 text-xl font-semibold mt-4 scroll-mt-24">Équipement de levage et de stabilisation</h3>
+          <h3 id="levage-kit" class="col-span-12 text-2xl sm:text-3xl font-bold mt-4 scroll-mt-24">
+            Équipement de levage et de stabilisation
+          </h3>
           <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
             <figure class="relative aspect-[3/4]">
               <img
@@ -228,7 +231,7 @@
           </article>
 
           <!--  ENTRETIEN-->
-          <h3 id="entretien" class="col-span-12 text-xl font-semibold mt-4 scroll-mt-24">Outils d'entretien automobile</h3>
+          <h3 id="entretien" class="col-span-12 text-2xl sm:text-3xl font-bold mt-4 scroll-mt-24">Outils d'entretien automobile</h3>
 
           <!--polisseuse-->
           <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
@@ -357,7 +360,7 @@
           </article>
 
           <!--DIAGNOSTIC-MOTEUR coffret de clés-->
-          <h3 id="diagnostic-motor" class="col-span-12 text-xl font-semibold mt-4 scroll-mt-24">Outils de diagnostic moteur</h3>
+          <h3 id="diagnostic-moteur" class="col-span-12 text-2xl sm:text-3xl font-bold mt-4 scroll-mt-24">Outils de diagnostic moteur</h3>
           <article class="catalogue__carte col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 h-full flex flex-col">
             <figure class="relative aspect-[3/4]">
               <img
@@ -480,7 +483,7 @@
             </div>
           </article>
           <!-- DIAGNOSTIC ÉLECTRIQUE et ÉLECTRONIQUE multimetre-->
-          <h3 id="diagnostic-electronique" class="col-span-12 text-xl font-semibold mt-4 scroll-mt-24">
+          <h3 id="diagnostic-electronique" class="col-span-12 text-2xl sm:text-3xl font-bold mt-4 scroll-mt-24">
             Outils de diagnostic électrique et électronique
           </h3>
 
@@ -609,6 +612,43 @@
             </div>
           </article>
         </div>
+      </section>
+
+      <!--FORM-SUBSCRIBE-->
+      <section
+        id="abonnement-subscribe"
+        aria-labelledby="abonnement-titre"
+        class="abonnement grid grid-cols-12 gap-4 sm:gap-6 lg:gap-10 text-center">
+        <h3 id="abonnement-titre" class="col-span-12 text-2xl sm:text-3xl font-bold">Recevez nos nouveautés d'outils chaque mois</h3>
+
+        <p class="col-span-12 md:col-start-4 md:col-span-6 xl:col-start-3 xl:col-span-8">
+          Nous mettons à jour notre catalogue chaque mois avec de nouveaux outils à louer, des offres exclusives et des conseils pratiques
+          pour vos projets. Recevez des mises à jour et du contenu utile directement dans votre boîte courriel
+        </p>
+
+        <form
+          id="subscribe-form"
+          class="grid grid-cols-12 gap-3 col-span-12"
+          action="#"
+          method="post"
+          aria-describedby="abonnement-form"
+          onsubmit="return validateSubscribeForm()"
+          novalidate>
+          <p id="abonnement-form" class="sr-only">Entrez votre courriel</p>
+
+          <div class="flex flex-col md:col-span-3 md:col-start-4 w-full max-w-sm">
+            <input
+              type="email"
+              id="email-abonnement"
+              name="email"
+              placeholder="Entrez votre courriel"
+              required
+              class="abonnement__champ px-4 py-2 border w-full" />
+            <div class="erreur-message mt-1" id="abonnement-erreur" aria-live="polite"></div>
+          </div>
+
+          <button type="submit" class="btn btn--secondaire w-32 text-center py-1.5 md:col-span-2 md:col-start-7">S'abonner</button>
+        </form>
       </section>
     </main>
 

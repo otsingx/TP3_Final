@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+.abonnement {
+  &__champ {
+    border: 2px solid $couleur-secondaire;
+  }
+
+  .border-erreur {
+    border-color: $couleur-erreur !important;
+  }
+
+  .erreur-message {
+    color: $couleur-erreur;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+}

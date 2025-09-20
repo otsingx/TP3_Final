@@ -1,10 +1,10 @@
 @use './variables' as *;
+@use "sass:color";
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   font-weight: 700;
   letter-spacing: 0.04em;
   color: #f9f9f9; 
@@ -15,10 +15,7 @@
 
   transition: background-color $transition-standard, color $transition-standard, transform $transition-standard;
 
-  &:focus-visible {
-    outline: 3px solid mix($couleur-secondaire, white, 80%);
-    outline-offset: 2px;
-  }
+
   &:active {
     transform: translateY(1px);
   }

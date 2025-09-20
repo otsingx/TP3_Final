@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $blue: #163f82;
 $orange: #f97316;
 $yellow: #fedc00;
@@ -12,7 +14,9 @@ $couleur-fonce: #1f2937;
 $couleur-fond-alternatif: #f9f9f9;
 $transition-standard: 200ms ease;
 
-$primaire-hover:   scale-color($couleur-primaire,   $lightness: 40%);
-$secondaire-hover: scale-color($couleur-secondaire, $lightness: 40%);
-$bordure-neutre:   mix($couleur-fonce, rgb(31, 30, 30), 85%); 
 
+$primaire-hover: color.scale($couleur-primaire, $lightness: 40%);
+$secondaire-hover: color.scale($couleur-secondaire, $lightness: 40%);
+
+$couleur-texte-pale: color.mix($couleur-fonce, #fff, 75%);
+$couleur-erreur-pale: color.mix($couleur-erreur, #fff, 85%);

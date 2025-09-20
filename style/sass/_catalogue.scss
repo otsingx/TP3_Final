@@ -1,5 +1,5 @@
 @use './variables' as *;
-
+@use "sass:color";
 .catalogue {
   &__carte {
     background: #fff;
@@ -12,7 +12,7 @@
     color: $couleur-fonce;
   }
   &__description {
-    color: mix($couleur-fonce, #fff, 75%);
+      color: color.mix($couleur-fonce, #fff, 75%);
   }
 
   &__heures {
@@ -21,7 +21,7 @@
 
   &__stock-valeur,
   &__unite {
-    color: mix($couleur-erreur, #fff, 85%);
+   color: color.mix($couleur-erreur, #fff, 85%);
   }
 
   &__stock--dispo {

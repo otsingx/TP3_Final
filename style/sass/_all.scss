@@ -1,12 +1,12 @@
-@forward './variables';
+@use './variables';
 
 
 
-@forward './nav';
-@forward './banniere';
-@forward './btn';
-@forward './carte';
-@forward './titres';
-@forward './temoignages';
-@forward './catalogue';
-@forward './abonnement';
+@use './nav';
+@use './banniere';
+@use './btn';
+@use './carte';
+@use './titres';
+@use './temoignages';
+@use './catalogue';
+@use './abonnement';

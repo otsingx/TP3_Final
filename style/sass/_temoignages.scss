@@ -6,13 +6,14 @@
   &__citation { 
     color: $couleur-fonce; 
   }
-
-  &__soustitre { color: mix($couleur-fonce, #fff, 80%); }
-
+  
   &__carte {
      background-color: $couleur-fond-alternatif; 
     border: 2px solid $couleur-secondaire;
   }
 
-  &__avatar { border-radius: 9999px; object-fit: cover; }
+  &__avatar 
+  { 
+    border-radius: 9999px; object-fit: cover; 
+  }
 }
