@@ -617,7 +617,7 @@
       <!--FORM-SUBSCRIBE-->
       <section
         id="abonnement-subscribe"
-        aria-labelledby="abonnement-titre"
+        aria-labelledby="section-abonnement-subscribe"
         class="abonnement grid grid-cols-12 gap-4 sm:gap-6 lg:gap-10 text-center">
         <h3 id="abonnement-titre" class="col-span-12 text-2xl sm:text-3xl font-bold">Recevez nos nouveautés d'outils chaque mois</h3>
 
@@ -635,20 +635,94 @@
           onsubmit="return validateSubscribeForm()"
           novalidate>
           <p id="abonnement-form" class="sr-only">Entrez votre courriel</p>
-
-          <div class="flex flex-col md:col-span-3 md:col-start-4 w-full max-w-sm">
+          <label for="email-abonnement" class="sr-only">Adresse courriel</label>
+          <div class="col-span-12 flex flex-col items-center gap-3 md:contents">
             <input
               type="email"
               id="email-abonnement"
               name="email"
               placeholder="Entrez votre courriel"
               required
-              class="abonnement__champ px-4 py-2 border w-full" />
+              class="abonnement__champ px-4 py-2 border max-w-sm w-full md:col-span-3 md:col-start-4" />
+            <button type="submit" class="btn btn--secondaire w-32 text-center py-1.5 md:col-span-2 md:col-start-7 text-base">
+              S'abonner
+            </button>
+          </div>
+          <div class="flex flex-col md:col-span-3 md:col-start-4 w-full max-w-sm">
             <div class="erreur-message mt-1" id="abonnement-erreur" aria-live="polite"></div>
           </div>
-
-          <button type="submit" class="btn btn--secondaire w-32 text-center py-1.5 md:col-span-2 md:col-start-7">S'abonner</button>
         </form>
+      </section>
+
+      <section id="youtube-section" aria-labelledby="youtube-titre" class="ressource grid grid-cols-12 gap-4 sm:gap-6 lg:gap-10">
+        <h2 id="ressource__titre" class="ressource__titre col-span-12 col-span-12 text-3xl sm:text-4xl lg:text-5xl font-bold text-center">
+          Ressources en ligne
+        </h2>
+        <div class="ressource__alert col-span-12 flex items-center justify-center gap-2" role="region" aria-label="Message de sécurité">
+          <i class="bx bx-error-circle bx-burst text-2xl sm:text-3xl lg:text-4xl ressource__alerte" aria-hidden="true"></i>
+          <span class="ressource__alert text-xl font-semibold">La sécurité avant tout!</span>
+        </div>
+        <div class="ressource__texte col-span-12 md:col-start-3 md:col-span-8" role="region" aria-label="Conseils de sécurité">
+          <p>
+            Avant de commencer toute réparation, <strong>assurez-vous de travailler dans un environnement sécuritaire</strong>. Portez des
+            lunettes de protection et des gants, évitez les vêtements amples et gardez un extincteur à portée de main.
+          </p>
+          <br />
+          <p>
+            Visionnez toujours plusieurs tutoriels avant d'agir. Certaines vidéos offrent des détails que d'autres ne couvrent pas. Prenez
+            le temps de comparer les approches pour bien comprendre chaque étape.
+          </p>
+          <br />
+          <p>Si une tâche vous semble trop complexe ou risquée, <strong>consultez un mécanicien professionnel</strong>.</p>
+        </div>
+        <div class="col-span-12 md:col-start-3 md:col-span-8 space-y-2 mt-8" role="region" aria-labelledby="kit-levage-titre">
+          <h3 id="kit-levage-titre" class="text-2xl sm:text-3xl font-bold">Kit de levage automobile</h3>
+          <p class="ressource__description">Soulevez votre véhicule en toute sécurité avec chandelles, crics et rampes adaptés.</p>
+          <a
+            href="https://youtu.be/93QCNfGihMw?si=ApIzoGsV8EjdY9oM"
+            class="ressource__lien inline-flex items-center gap-1 text-base sm:text-lg font-bold"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="ressource__icone bx bx-play-circle text-2xl" aria-hidden="true"></i>
+            <span>Voir le tutoriel sur YouTube</span>
+          </a>
+        </div>
+        <div class="col-span-12 md:col-start-3 md:col-span-8 space-y-2 mt-6" role="region" aria-labelledby="entretien-titre">
+          <h3 id="entretien-titre" class="text-2xl sm:text-3xl font-bold">Outils d'entretien automobile</h3>
+          <p class="ressource__description">Apprenez à faire les vidanges d'huile, le remplacement de filtres et l'entretien de base.</p>
+          <a
+            href="https://youtu.be/FwLYytK_IJM?si=XLpA64FdSPQohazi"
+            class="ressource__lien inline-flex items-center gap-1 text-base sm:text-lg font-bold"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="ressource__icone bx bx-play-circle text-2xl" aria-hidden="true"></i>
+            <span>Voir le tutoriel sur YouTube</span>
+          </a>
+        </div>
+        <div class="col-span-12 md:col-start-3 md:col-span-8 space-y-2 mt-6" role="region" aria-labelledby="diag-moteur-titre">
+          <h3 id="diag-moteur-titre" class="text-2xl sm:text-3xl font-bold">Outils de diagnostic moteur</h3>
+          <p class="ressource__description">Comprenez les symptômes mécaniques en utilisant des outils simples de diagnostic.</p>
+          <a
+            href="https://youtu.be/Qk69G04cAkg?si=oaBGs2pmo2L-vxyo"
+            class="ressource__lien inline-flex items-center gap-1 text-base sm:text-lg font-bold"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="ressource__icone bx bx-play-circle text-2xl" aria-hidden="true"></i>
+            <span>Voir le tutoriel sur YouTube</span>
+          </a>
+        </div>
+        <div class="col-span-12 md:col-start-3 md:col-span-8 space-y-2 mt-6" role="region" aria-labelledby="diag-elec-titre">
+          <h3 id="diag-elec-titre" class="text-2xl sm:text-3xl font-bold">Outils de diagnostic électronique</h3>
+          <p class="ressource__description">Utilisez un scanner OBDLinx MX pour analyser les codes d'erreurs électroniques.</p>
+          <a
+            href="https://youtu.be/s1cysxFHlas?si=zfIh7nn2D9Zd41WF"
+            class="ressource__lien inline-flex items-center gap-1 text-base sm:text-lg font-bold"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="ressource__icone bx bx-play-circle text-2xl" aria-hidden="true"></i>
+            <span class="ressource__lien">Voir le tutoriel sur YouTube</span>
+          </a>
+        </div>
       </section>
     </main>
 

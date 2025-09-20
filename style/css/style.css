@@ -107,6 +107,9 @@
   border: 2px solid #163f82;
   box-shadow: 0 10px 20px 0 rgba(31, 41, 55, 0.18);
 }
+.catalogue h2 {
+  color: #163f82;
+}
 .catalogue__titre, .catalogue__prix {
   color: #1f2937;
 }
@@ -142,4 +145,35 @@
   color: #ff3860;
   font-size: 0.875rem;
   margin-top: 0.25rem;
+}
+
+.ressource__titre {
+  color: #163f82;
+}
+.ressource__alerte {
+  color: #ff3860;
+  opacity: 0;
+}
+.ressource__lien {
+  color: #163f82;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.ressource__lien:hover {
+  text-decoration: none;
+}
+.ressource__icone {
+  color: #163f82;
+  text-decoration: none;
+}
+.ressource__icone:hover {
+  color: #09c372;
+  text-decoration: none;
+}
+.ressource__lien span {
+  text-decoration: none;
+}
+.ressource__lien:hover span {
+  text-decoration: underline;
+  color: #09c372;
 }
