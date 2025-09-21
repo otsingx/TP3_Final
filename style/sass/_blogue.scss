@@ -1,0 +1,41 @@
+@use './variables' as *;
+
+.blogue {
+  &__titre {
+    color: $couleur-secondaire;
+  }
+
+  &__alerte {
+    color: $couleur-erreur;
+    opacity: 0;
+  }
+
+  &__lien {
+    color: $couleur-secondaire;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  &__lien:hover {
+    text-decoration: none;
+  }
+
+  &__icone {
+    color: $couleur-secondaire;
+    text-decoration: none;
+  }
+
+  &__icone:hover {
+    color: $couleur-accent;
+    text-decoration: none;
+  }
+
+&__lien span {
+  text-decoration: none;
+}
+
+&__lien:hover span {
+  text-decoration: underline;
+  color: $couleur-accent;
+}
+}
