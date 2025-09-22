@@ -1,8 +1,20 @@
 @use './variables' as *;
 
-.abonnement {
+.reservation {
+ fieldset { 
+    border: 2px solid $couleur-secondaire; 
+  }
+  
   &__champ {
     border: 2px solid $couleur-secondaire;
+  }
+
+  &__titre {
+  color: $couleur-secondaire;
+  }
+
+  &__dispo {
+  color: $couleur-accent;
   }
 
   .border-erreur {
@@ -11,7 +23,5 @@
 
   .erreur-message {
     color: $couleur-erreur;
-    font-size: 0.75rem;
-    margin-top: 0.25rem;
   }
 }

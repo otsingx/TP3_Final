@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="validation.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <link rel="stylesheet" href="/style/css/style.css" />
-
     <link rel="stylesheet" href="/style/css/style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -190,26 +187,196 @@
       </section>
 
       <!--FORM-->
-      <section id="reservation-24h" class="grid grid-cols-12 gap-6">
+
+      <section id="reservation-24h" class="reservation grid grid-cols-12 gap-6">
+        <p id="message-reservation" class="text-sm" aria-live="polite"></p>
         <header class="col-span-12">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Réserver un outil (24 h)</h2>
-          <p class="mt-2">Choisissez la date/heure, la quantité et le mode de réception.</p>
+          <h3 class="reservation__titre text-2xl sm:text-3xl font-bold">Réserver un outil (24 h)</h3>
+          <p class="mt-2 font-bold">Choisissez la date, la heure, la quantité et le mode de réception</p>
         </header>
-        <form class="col-span-12 md:col-span-8 space-y-4 novalidate">
+        <form id="reservation-form" class="col-span-12 md:col-span-8 space-y-4" novalidate>
           <div class="grid grid-cols-2 gap-3">
-            <label class="text-sm">
+            <label class="text-sm block mt-4">
               Prénom
-              <input type="text" name="prenom" id="reservation-prenom" class="w-full border px-2 py-1 text-sm mt-1" required />
-              <p id="reservation-prenom-error" class="text-xs text-red-500 mt-1"></p>
+              <input type="text" name="prenom" id="reservation-prenom" class="reservation__champ mt-1 w-full px-2 py-1 text-sm" required />
+              <p id="reservation-prenom-error" class="erreur-message text-xs mt-1"></p>
             </label>
           </div>
+
+          <!--nom-->
+          <div class="grid grid-cols-2 gap-3">
+            <label class="text-sm block mt-4">
+              Nom
+              <input type="text" name="nom" id="reservation-nom" class="reservation__champ mt-1 w-full px-2 py-1 text-sm" required />
+              <p id="reservation-nom-error" class="erreur-message text-xs mt-1"></p>
+            </label>
+          </div>
+
+          <!--phone-->
+          <div class="grid grid-cols-2 gap-3">
+            <label class="text-sm">
+              Téléphone
+              <input
+                type="tel"
+                name="tel"
+                id="reservation-phone"
+                class="reservation__champ mt-1 w-full px-2 py-1 text-sm"
+                placeholder="123-456-7891"
+                pattern="\d{3}[- .]?\d{3}[- .]?\d{4}" />
+              <p id="reservation-phone-error" class="erreur-message text-xs mt-1"></p>
+            </label>
+          </div>
+
+          <!--adresse-curriel-->
+          <div class="grid grid-cols-2 gap-3">
+            <label class="text-sm">
+              Adresse courriel
+              <input type="email" name="email" id="reservation-email" class="reservation__champ mt-1 w-full px-2 py-1 text-sm" required />
+              <p id="reservation-email-error" class="erreur-message text-xs mt-1"></p>
+            </label>
+          </div>
+
+          <!--date-->
+          <div class="grid grid-cols-2 gap-3">
+            <label class="text-sm">
+              Début
+              <input
+                id="reservation-start"
+                type="datetime-local"
+                name="start"
+                class="reservation__champ mt-1 w-full px-2 py-1 text-sm"
+                required />
+            </label>
+            <label class="text-sm">
+              Retour (auto)
+              <input
+                id="reservation-end"
+                type="text"
+                name="end"
+                class="reservation__champ mt-1 w-full px-2 py-1 text-sm bg-gray-100"
+                readonly />
+            </label>
+          </div>
+
+          <!--en stock-->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <label class="text-sm">
+              Quantité
+              <input type="number" name="quantite" min="1" value="1" class="reservation__champ mt-1 w-full px-2 py-1 text-sm" />
+            </label>
+
+            <div class="text-sm">
+              <span class="block">Disponibilité</span>
+              <span class="reservation__dispo mt-1 inline-block px-3 py-1 text-md font-bold">5 en stock </span>
+            </div>
+          </div>
+
+          <!--mode-de-réception-->
+          <fieldset class="border-2 p-3">
+            <legend class="text-sm font-semibold px-2 ml-3">Mode de réception</legend>
+
+            <div class="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-center gap-2 text-sm">
+                <input type="radio" name="mode-reception" value="retrait" class="size-4" checked />
+                Retrait en magasin
+              </label>
+              <label class="flex items-center gap-2 text-sm">
+                <input type="radio" name="mode-reception" value="livraison" class="size-4" />
+                Livraison à domicile
+              </label>
+            </div>
+
+            <!--adresse-postal-->
+            <div id="champs-livraison" class="mt-3 hidden space-y-3">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="text-sm sm:col-span-2">
+                  Adresse
+                  <input
+                    type="text"
+                    name="adresse"
+                    id="reservation-adresse"
+                    class="reservation__champ mt-1 w-full px-2 py-1 text-sm"
+                    placeholder="123, rue Sainte-Catherine" />
+                  <p id="reservation-adresse-error" class="erreur-message text-xs mt-1"></p>
+                </label>
+
+                <label class="text-sm">
+                  Code postal
+                  <input type="text" name="code-postal" class="reservation__champ mt-1 w-full px-2 py-1 text-sm" placeholder="H2B 3A4" />
+                </label>
+              </div>
+
+              <label class="text-sm">
+                Zone de livraison
+                <select name="zone" class="reservation__champ mt-2 w-full px-2 py-1 text-sm">
+                  <option value="proche">Proche (jusqu'à 10&nbsp;km) &mdash; 9,99&nbsp;$</option>
+                  <option value="ville">Ville (10&ndash;25&nbsp;km) &mdash; 19,99&nbsp;$</option>
+                  <option value="hors-ville">Hors-ville (plus de 25&nbsp;km) &mdash; 29,99&nbsp;$</option>
+                </select>
+              </label>
+
+              <p class="erreur-message text-xs mt-1">Commandez avant midi pour être livré le jour même !</p>
+            </div>
+          </fieldset>
+
+          <div class="flex justify-end gap-2">
+            <button type="button" class="btn btn--secondaire text-xs px-3 py-2">Annuler</button>
+            <button type="submit" class="btn btn--primaire text-xs px-3 py-2 mr-4">Vérifier la dispo</button>
+          </div>
         </form>
+        <aside class="col-span-12 md:col-span-4">
+          <div class="md:sticky md:top-8 border p-4 text-sm">
+            <h3 class="font-semibold mb-3">Récapitulatif</h3>
+            <div class="space-y-1">
+              <div class="flex justify-between"><span>Outil</span><span>Polisseuse Simons</span></div>
+              <div class="flex justify-between"><span>Prix (24 h)</span><span>15.00$</span></div>
+              <div class="flex justify-between"><span>Livraison</span><span>0.00$</span></div>
+              <div class="border-t pt-2 font-semibold flex justify-between"><span>Total</span><span>15.00$</span></div>
+            </div>
+
+            <button
+              class="mt-4 w-full btn btn--primaire text-sm disabled:opacity-50 disabled:pointer-events-none"
+              data-rent="perceuse"
+              disabled>
+              Louer 24 h
+            </button>
+          </div>
+        </aside>
+      </section>
+      <!--MAP-->
+      <section id="localisation" class="contact grid grid-cols-12 gap-10">
+        <header class="col-span-12 text-center">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#163f82] mb-10">Où nous trouver</h2>
+          <p class="mt-6 flex justify-center items-center gap-2">
+            <i class="bx bxs-phone text-3xl font-bold text-[#163f82]" aria-hidden="true"></i>
+            <a href="tel:+15145551234" class="hover:no-underline hover:text-[#09c372] font-bold text-[#163f82] text-2xl">
+              (514) 555-1234
+            </a>
+            <span class="sr-only">Téléphone</span>
+          </p>
+          <p class="mt-6 flex justify-center items-center gap-2">
+            <i class="bx bxl-messenger text-3xl font-bold text-[#163f82]" aria-hidden="true"></i>
+            <a
+              href="https://m.me/votrepage"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:no-underline hover:text-[#09c372] font-bold text-[#163f82] text-2xl">
+              Contactez-nous sur Messenger
+            </a>
+            <span class="sr-only">Lien vers Messenger</span>
+          </p>
+        </header>
+        <div class="col-span-12 relative h-80 sm:h-96 lg:h-[420px]">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            style="border: 0"
+            title="Carte — 7077, boul. Newman, LaSalle"
+            loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11196.80536368388!2d-73.61860293595825!3d45.445598695935615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc910df0260c94d%3A0x47066cbfef0a37df!2s7077%20Bd%20Newman%2C%20LaSalle%2C%20QC%20H8N%201X1!5e0!3m2!1sfr!2sca!4v1738900922099!5m2!1sfr!2sca">
+          </iframe>
+        </div>
       </section>
     </main>
-
-    <footer>
-      <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8"></div>
-    </footer>
 
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8">
       <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
@@ -234,9 +401,6 @@
             <div>
               <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h3>
               <ul>
-                <li class="mb-4">
-                  <a href="#" target="_blank" class="text-gray-600 hover:underline dark:text-gray-400">Github</a>
-                </li>
                 <li>
                   <a href="#" target="_blank" class="text-gray-600 hover:underline dark:text-gray-400">Discord</a>
                 </li>
