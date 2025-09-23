@@ -26,3 +26,17 @@ https://celebrated-pithivier-4ef9b9.netlify.app
 - catalogue.html
 - reservation.html
 - offline.html
+
+## Composants et Ressources Utilisés
+- Composants Tailwind
+- Contact Map – Creative Tim
+- Footer – Flowbite
+- Navbar -Flowbite
+
+## Effets d’animation ajoutés :
+
+En haut de l’image de la bannière (index.html)
+
+Dans le titre Outils de la section Outils (catalogue.html)
+
+Dans le titre Ressources en ligne de la page Catalogue (catalogue.html)
