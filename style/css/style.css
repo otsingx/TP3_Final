@@ -215,6 +215,9 @@
 .reservation__champ {
   border: 2px solid #163f82;
 }
+.reservation__heures {
+  color: #f97316;
+}
 .reservation__titre {
   color: #163f82;
 }
