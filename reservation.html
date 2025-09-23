@@ -10,6 +10,7 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json" />
     <title>Auto-Bricolage | Réservation d'outils en ligne à Montréal</title>
     <meta
       name="description"
@@ -466,5 +467,19 @@
         </div>
       </div>
     </footer>
+     <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then((reg) => {
+              console.log('Service Worker registered', reg);
+            })
+            .catch((err) => {
+              console.log('Service Worker registration failed:', err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

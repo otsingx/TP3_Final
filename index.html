@@ -10,7 +10,8 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title><title>Auto-Bricolage | Location d'outils et équipements à Montréal et tutoriels pratiques</title>
+    <link rel="manifest" href="manifest.json" />
+    <title>Auto-Bricolage | Location d'outils et équipements à Montréal et tutoriels pratiques</title>
     <meta
       name="description"
       content="Découvrez Auto-Bricolage : location d'outils à Montréal, avis clients et aperçu de nos équipements. Louez facilement pour vos projets maison et auto." />
@@ -418,5 +419,19 @@
         </div>
       </div>
     </footer>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then((reg) => {
+              console.log('Service Worker registered', reg);
+            })
+            .catch((err) => {
+              console.log('Service Worker registration failed:', err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

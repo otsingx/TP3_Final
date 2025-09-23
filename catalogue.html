@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
     <script src="subscribe.js" defer></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json" />
     <title>Auto-Bricolage | Outils et équipements à louer à Montréal</title>
     <meta
       name="description"
@@ -811,5 +812,19 @@
         </div>
       </div>
     </footer>
+     <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then((reg) => {
+              console.log('Service Worker registered', reg);
+            })
+            .catch((err) => {
+              console.log('Service Worker registration failed:', err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
